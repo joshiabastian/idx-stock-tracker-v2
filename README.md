@@ -1,2 +1,8 @@
-# idx-stock-tracker-v2
-IDX Stock Tracker v2 is a SaaS MVP that fetches IDX80 data daily, computes technical indicators, ranks stocks, runs AI analysis, and generates a shared PDF report. Results are delivered via Telegram for free users, with full dashboard and report access for premium users.
+# 📈 IDX Stock Tracker v2
+
+A lightweight SaaS MVP for monitoring **IDX80 stocks**.  
+The system runs a daily batch at 19:00 to fetch data, compute indicators, rank stocks, generate AI-driven insights, and deliver a shared PDF report via Telegram and dashboard.
+
+
+This repository is currently a **blueprint** for the MVP.  
+Implementation will evolve step by step with contributions from data, backend, and frontend engineers.
