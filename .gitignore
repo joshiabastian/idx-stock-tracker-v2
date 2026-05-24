@@ -1,0 +1,40 @@
+# --- Global ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.db
+*.sqlite
+.env
+.DS_Store
+Thumbs.db
+
+# --- Worker ---
+venv/
+.venv/
+ENV/
+env/
+.ipynb_checkpoints/
+.airflow/
+*.parquet
+*.csv
+*.tsv
+
+# --- Backend ---
+node_modules/
+dist/
+build/
+coverage/
+*.pid
+
+# --- Frontend ---
+node_modules/
+dist/
+build/
+.cache/
+*.map
+
+# --- Docker & Postgres ---
+docker-data/
+pgdata/
