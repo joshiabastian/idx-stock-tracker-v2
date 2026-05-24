@@ -29,9 +29,6 @@ coverage/
 *.pid
 
 # --- Frontend ---
-node_modules/
-dist/
-build/
 .cache/
 *.map
 
