@@ -1,0 +1,17 @@
+yfinance
+pandas
+numpy
+pandas-ta
+psycopg2-binary
+openai
+feedparser
+requests
+WeasyPrint
+Jinja2
+supabase
+schedule
+python-dotenv
+python-dateutil
+pytz
+tenacity
+python-telegram-bot
