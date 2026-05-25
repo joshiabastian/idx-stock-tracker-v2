@@ -1,5 +1,7 @@
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
+-- Database schema for stock data, indicators, news, AI analysis, and reports
+
 CREATE TABLE IF NOT EXISTS ohlcv_data (
     id          BIGSERIAL PRIMARY KEY,
     ticker      VARCHAR(20) NOT NULL,
