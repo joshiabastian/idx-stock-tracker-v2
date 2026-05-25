@@ -1,1 +1,53 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: idx_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
 
+  worker:
+    build:
+      context: ./worker
+      dockerfile: Dockerfile
+    container_name: idx_worker
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: idx_backend
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: idx_frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+    env_file:
+      - .env
+
+volumes:
+  pgdata:
