@@ -1,0 +1,29 @@
+src/
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.tsx           ← top nav + search + market status
+│   │   └── Footer.tsx
+│   └── ui/                       ← reusable primitives
+│       ├── Button.tsx            (primary/ghost/outline · sm/md)
+│       ├── Card.tsx
+│       ├── Badge.tsx             (+ SignalBadge BUY/SELL/HOLD)
+│       ├── ChangePct.tsx         (auto +/- color)
+│       ├── ProgressBar.tsx       (5 tones, optional labels)
+│       ├── ScoreRing.tsx         (SVG ring 0–100)
+│       ├── Sparkline.tsx         (mini SVG line)
+│       └── CandleChart.tsx       (SVG candlestick + VWAP + Ichimok
+├── sections/
+│   ├── dashboard/                ← 7 file (MarketTicker, Watchlistel, IndicatorStrip, LiveSignals, NewsSentiment)
+│   ├── watchlist/                ← 5 file (TickerHeader, ChartArea, QuantamentalScore, AIAnalysis, IndicatorCards)
+│   └── scanner/                  ← 3 file (SavedScans, ActiveFilters, ScanResults)
+├── pages/
+│   ├── Dashboard.tsx             ← image 2.jpeg
+│   ├── Watchlist.tsx             ← image 1.jpeg
+│   ├── Scanner.tsx               ← image 3.jpeg
+│   └── Placeholder.tsx
+├── lib/
+│   ├── types.ts
+│   └── mockData.ts               ← semua data dummy di sini, gampang diganti API
+├── App.tsx                       ← simple page switcher
+├── main.tsx
+└── index.css                     ← Tailwind v4 + design tokens (bg/surface/accent/bull/bear/dst)
